@@ -15,7 +15,7 @@ class _LoadingState extends State<Loading> {
     Response response = await get(
         'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty');
     List storyId = jsonDecode(response.body);
-    storyId = storyId.sublist(0, 10);
+    storyId = storyId.sublist(0, 20);
 
     for (var id in storyId) {
       Response storyResponse = await get(
